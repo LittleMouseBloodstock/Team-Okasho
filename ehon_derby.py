@@ -22,8 +22,8 @@ except FileNotFoundError:
 
 # --- 環境変数からAPIキーを取得 ---
 # --- APIキー取得 ---
-PERPLEXITY_API_KEY = os.getenv("PERPLEXITY_API_KEY")
-CALIL_API_KEY = os.getenv("CALIL_API_KEY")
+PERPLEXITY_API_KEY = st.secrets["PERPLEXITY_API_KEY"]
+CALIL_API_KEY = st.secrets["CALIL_API_KEY"]
 
 # --- Perplexity APIからやさしい解説を取得する関数 ---
 def get_summary_from_perplexity(title, author, retries=3, delay=2):
